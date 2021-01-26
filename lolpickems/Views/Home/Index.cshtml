@@ -1,0 +1,101 @@
+﻿@{ 
+  string week1Day1TeamA = "TL"; 
+  string week1Day1TeamB = "100T";
+  string week1Day2TeamA = "FreeSM";
+  string week1Day2TeamB = "GGS";
+  string week1Day3TeamA = "DIG";
+  string week1Day3TeamB = "FLY";
+  string week2Day1TeamA = "Gravity";
+  string week2Day1TeamB = "Coast";
+  string week2Day2TeamA = "100T";
+  string week2Day2TeamB = "FreeSM";
+  string week2Day3TeamA = "CLG";
+  string week2Day3TeamB = "GGS";
+  var week1Day1TeamValue1 = "1";
+  var week1Day1TeamValue2 = "2";
+}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>League of Legends Pick 'Ems Project</title>
+        <script src="Teams.js"></script>
+    </head>  
+    <body>
+        <h1>Setting up radio buttons for team selection</h1>
+        <!---Setting up radio buttons for each match outcome. Both teams are listed but only one can be selected per matchup-->
+        <table>
+          <tr>
+            <th>
+              <p>Week 1</p>
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <form>
+                  <input type="radio" id="week1day1team1" name="Teams" value=@week1Day1TeamValue1>
+                  <label for="week1day1team1">@week1Day1TeamA</label><br>
+                  <input type="radio" id="week1day1team2" name="Teams" value=@week1Day1TeamValue2>
+                  <label for="week1day1team2">@week1Day1TeamB</label><br>
+              </form>
+            </td>
+
+            <td>
+              <form>
+                  <input type="radio" id="week1day2team1" name="Teams2" value=@week1Day2TeamA>
+                  <label for="week1day2team1">@week1Day2TeamA</label><br>
+                  <input type="radio" id="week1day2team2" name="Teams2" value=@week1Day2TeamB>
+                  <label for="week1day2team2">@week1Day2TeamB</label><br>
+              </form>
+            </td>
+
+            <td>
+              <form>
+                  <input type="radio" id="week1day3team1" name="Teams3" value=@week1Day3TeamA>
+                  <label for="week1day3team1">@week1Day3TeamA</label><br>
+                  <input type="radio" id="week1day3team2" name="Teams3" value=@week1Day3TeamB>
+                  <label for="week1day3team2">@week1Day3TeamB</label><br>
+              </form>
+            </td>
+          </tr>
+
+          <tr>
+            <th>
+              <p>Week 2</p>
+            </th>
+          </tr>
+
+          <tr>
+            <td>
+              <form>
+                  <input type="radio" id="week2day1team1" name="Teams4" value=@week2Day1TeamA>
+                  <label for="week2day1team1">@week2Day1TeamA</label><br>
+                  <input type="radio" id="week2day1team2" name="Teams4" value=@week2Day1TeamB>
+                  <label for="week2day1team2">@week2Day1TeamB</label><br>
+              </form>
+            </td>
+
+            <td>
+              <form>
+                <input type="radio" id="week2day2team1" name="Teams5" value=@week2Day2TeamA>
+                <label for="week2day2team1">@week2Day2TeamA</label><br>
+                <input type="radio" id="week2day2team2" name="Teams5" value=@week2Day2TeamB>
+                <label for="week2day2team2">@week2Day2TeamB</label><br>
+              </form>
+            </td>
+
+            <td>
+              <form>
+                <input type="radio" id="week2day3team1" name="Teams6" value=@week2Day3TeamA>
+                <label for="week2day3team1">@week2Day3TeamA</label><br>
+                <input type="radio" id="week2day3team2" name="Teams6" value=@week2Day3TeamB>
+                <label for="week2day3team2">@week2Day3TeamB</label><br>
+              </form>
+            </td>
+
+          </tr>
+
+        </table>
+          <!--Submit button added to send the above radio button responses to server scripts which will later save to a user profile--->
+        <input type="submit">    
+    </body>
+</html>
